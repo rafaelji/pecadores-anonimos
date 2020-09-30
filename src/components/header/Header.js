@@ -7,24 +7,24 @@ function Header(props) {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-12 p-0">
-							<nav class="navbar navbar-expand-lg navbar-light bg-light">
-								<a class="navbar-brand" href="#">
+							<nav className="navbar navbar-expand-lg navbar-light bg-light">
+								<a className="navbar-brand" href="#">
 									<span role="img" arial-label="Mãos em posição de oração">&#x1F64F;</span>
 								</a>
-								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-									<span class="navbar-toggler-icon"></span>
+								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span className="navbar-toggler-icon"></span>
 								</button>
 
-								<div class="collapse navbar-collapse" id="navbarSupportedContent">
-									<ul class="navbar-nav mr-auto">
-										<li class="nav-item active">
-										<a class="nav-link" href="#">Início</a>
+								<div className="collapse navbar-collapse" id="navbarSupportedContent">
+									<ul className="navbar-nav mr-auto">
+										<li className="nav-item active">
+										<a className="nav-link" href="#">Início</a>
 										</li>
-										<li class="nav-item">
-										<a class="nav-link" href="#">Pedidos</a>
+										<li className="nav-item">
+										<a className="nav-link" href="#">Pedidos</a>
 										</li>
-										<li class="nav-item">
-										<a class="nav-link" href="#">Agradecimentos</a>
+										<li className="nav-item">
+										<a className="nav-link" href="#">Agradecimentos</a>
 										</li>
 									</ul>
 								</div>
