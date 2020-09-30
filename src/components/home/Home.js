@@ -40,7 +40,7 @@ function Home(props) {
 									Entendo e concordo que meu pedido ou agradecimento será salvo e disponibilizado publicamente (por e-mail ou no aqui na plataforma) conforme identificado (com nome ou de forma anônima) no formulário acima e me responsabilizo pelo conteúdo do mesmo.
 								</label>
 							</div>
-							<button type="submit" className="btn btn-primary btn-lg btn-block mt-5" disabled={!enableSend()}>Enviar</button>
+							<button type="submit" className="btn btn-primary btn-lg btn-block mt-5 mb-5" disabled={!enableSend()}>Enviar</button>
 						</form>
 					</div>
 				</div>
