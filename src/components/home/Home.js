@@ -1,12 +1,26 @@
 import React, {useState} from 'react';
 import './Home.css';
+import SendPrayService from '../../services/SendPrayService';
 
 function Home(props) {
+	const [name, setName] = useState('');
 	const [type, setType] = useState('ask');
 	const [description, setDescription] = useState('');
 	const [acceptTerms, setAcceptTerms] = useState(false);
 
 	const enableSend = () => (type === 'ask' || type === 'thank') && (description.trim().length > 6 && description.length < 255) && acceptTerms;
+
+	const sendPray = async (e) => {
+		e.preventDefault();
+
+		const prayData = {
+			name,
+			type,
+			description
+		};
+
+		await SendPrayService.send(prayData);
+	};
 
 	return (
 		<main>
@@ -16,7 +30,7 @@ function Home(props) {
 						<form>
 							<div className="form-group">
 								<label htmlFor="name">Nome <span className="name-hint">(se o campo estiver vazio será identificado como anônimo)</span></label>
-								<input className="form-control" id="name" />
+								<input className="form-control" id="name" value={name} onChange={e => setName(e.target.value)} />
 							</div>
 							<div className="form-check">
 								<input className="form-check-input" type="radio" name="type" id="ask" value="ask" checked={type === 'ask'} onChange={e => setType(e.target.value)}/>
@@ -41,7 +55,7 @@ function Home(props) {
 									Entendo e concordo que meu pedido ou agradecimento será salvo e disponibilizado publicamente (por e-mail ou no aqui na plataforma) conforme identificado (com nome ou de forma anônima) no formulário acima e me responsabilizo pelo conteúdo do mesmo.
 								</label>
 							</div>
-							<button type="submit" className="btn btn-primary btn-lg btn-block mt-5 mb-5" disabled={!enableSend()}>Enviar</button>
+							<button type="submit" className="btn btn-primary btn-lg btn-block mt-5 mb-5" disabled={!enableSend()} onClick={sendPray}>Enviar</button>
 						</form>
 					</div>
 				</div>
