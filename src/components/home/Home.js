@@ -4,8 +4,9 @@ import './Home.css';
 function Home(props) {
 	const [type, setType] = useState('ask');
 	const [description, setDescription] = useState('');
+	const [acceptTerms, setAcceptTerms] = useState(false);
 
-	const enableSend = () => (type === 'ask' || type === 'thank') && (description.trim().length > 6 && description.length < 255);
+	const enableSend = () => (type === 'ask' || type === 'thank') && (description.trim().length > 6 && description.length < 255) && acceptTerms;
 
 	return (
 		<main>
@@ -35,7 +36,7 @@ function Home(props) {
 								<p className="text-right">{255 - description.length} caracteres restantes</p>
 							</div>
 							<div className="form-check mt-5">
-								<input className="form-check-input" type="checkbox" value="" id="use-terms" />
+								<input className="form-check-input" type="checkbox" id="use-terms" checked={acceptTerms} onChange={e => setAcceptTerms(e.target.checked)}/>
 								<label className="form-check-label" htmlFor="use-terms">
 									Entendo e concordo que meu pedido ou agradecimento será salvo e disponibilizado publicamente (por e-mail ou no aqui na plataforma) conforme identificado (com nome ou de forma anônima) no formulário acima e me responsabilizo pelo conteúdo do mesmo.
 								</label>
