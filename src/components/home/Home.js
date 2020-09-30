@@ -19,7 +19,12 @@ function Home(props) {
 			description
 		};
 
-		await SendPrayService.send(prayData);
+    await SendPrayService.send(prayData);
+    
+    setName('');
+    setType('ask');
+    setDescription('');
+    setAcceptTerms(false);
 	};
 
 	return (
