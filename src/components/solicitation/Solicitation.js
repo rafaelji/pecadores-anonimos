@@ -9,7 +9,7 @@ function Solicitation(props) {
   useEffect(() => {
     async function getSolicitations() {
       try {
-        const solicitationsList = await GetSolicitation.get('ask');        
+        const solicitationsList = await GetSolicitation.get();        
         setSolicitations(solicitationsList);
       } catch (error) {
         console.log(error);

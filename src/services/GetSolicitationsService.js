@@ -1,9 +1,9 @@
-import getSolicitationsStorage from '../storage/GetSolicitationsStorage';
+import getPrayersStorage from '../storage/GetPrayersStorage';
 
 class GetSolicitationsService {
-    async get(type) {
+    async get() {
 			try {
-        const solicitationsList = await getSolicitationsStorage(type);
+        const solicitationsList = await getPrayersStorage('ask');
         
         return Object.values(solicitationsList.val());
 			} catch (error) {

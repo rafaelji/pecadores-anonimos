@@ -1,6 +1,6 @@
 import firebase from './Api';
 
-const GetSolicitationsStorage = async (type) => {
+const GetPrayersStorage = async (type) => {
 	try {
 		const database = firebase.database();
 		return database.ref('prayers').orderByChild('type').equalTo(type).once('value');
@@ -9,4 +9,4 @@ const GetSolicitationsStorage = async (type) => {
 	}
 };
 
-export default GetSolicitationsStorage;
+export default GetPrayersStorage;
