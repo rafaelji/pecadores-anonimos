@@ -29,6 +29,14 @@ function Home(props) {
 
 	return (
 		<main>
+      <div className="container-fluid text-center">
+        <div className="row">
+          <div className="col-12 p-0">
+            <h1 className="title">Pecadores Anônimos</h1>
+            <h2 className="subtitle">Orai sem cessar. 1° Ts 5:17</h2>
+          </div>
+        </div>
+      </div>
 			<div className="container">
 				<div className="row">
 					<div className="col-12">
@@ -57,7 +65,7 @@ function Home(props) {
 							<div className="form-check mt-5">
 								<input className="form-check-input" type="checkbox" id="use-terms" checked={acceptTerms} onChange={e => setAcceptTerms(e.target.checked)}/>
 								<label className="form-check-label" htmlFor="use-terms">
-									Entendo e concordo que meu pedido ou agradecimento será salvo e disponibilizado publicamente (por e-mail ou no aqui na plataforma) conforme identificado (com nome ou de forma anônima) no formulário acima e me responsabilizo pelo conteúdo do mesmo.
+									Entendo e concordo que meu pedido ou agradecimento será armazenado e disponibilizado publicamente (por e-mail ou no aqui na plataforma) conforme identificado (com nome ou de forma anônima) no formulário acima e me responsabilizo pelo conteúdo do mesmo.
 								</label>
 							</div>
 							<button type="submit" className="btn btn-primary btn-lg btn-block mt-5 mb-5" disabled={!enableSend()} onClick={sendPray}>Enviar</button>
