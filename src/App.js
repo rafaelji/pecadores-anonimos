@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
-import List from './components/list/List';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import Solicitation from './components/solicitation/Solicitation';
 
 function App() {
   return (
@@ -20,10 +20,10 @@ function App() {
             <Home/>
           </Route>
           <Route exact path="/pedidos">
-            <List></List>
+            <Solicitation></Solicitation>
           </Route>
           <Route exact path="/agradecimentos">
-            <List></List>
+            <Solicitation></Solicitation>
           </Route>
         </Switch>
       </Router>
