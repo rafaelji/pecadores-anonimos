@@ -5,7 +5,11 @@ class GetSolicitationsService {
 			try {
         const solicitationsList = await getPrayersStorage('ask');
         
-        return Object.values(solicitationsList.val());
+        if(solicitationsList.val()) {
+          return Object.values(solicitationsList.val());
+        }
+
+        return [];
 			} catch (error) {
 				console.log("service", error);
 			}
