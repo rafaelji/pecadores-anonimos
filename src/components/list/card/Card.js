@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card(props) {
   return (
-    <div className="card">
+    <div className="card mb-3">
       <div className="text-right">
         <div className="dropdown">
           <button className="btn btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
