@@ -1,8 +1,24 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import List from '../list/List';
 import './Solicitation.css';
+import GetSolicitation from '../../services/GetSolicitationsService';
 
 function Solicitation(props) {
+  const [solicitations, setSolicitations] = useState([]);
+
+  useEffect(() => {
+    async function getSolicitations() {
+      try {
+        const solicitationsList = await GetSolicitation.get('ask');        
+        setSolicitations(solicitationsList);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    getSolicitations();
+  },[]);
+
   return (
     <>
       <main>
@@ -14,7 +30,7 @@ function Solicitation(props) {
             </div>
           </div>
         </div>
-        <List></List>
+        <List list={solicitations}></List>
       </main>
     </>
   );

@@ -9,7 +9,7 @@ function Header(props) {
 					<div className="row">
 						<div className="col-12 p-0">
 							<nav className="navbar navbar-expand-lg navbar-light bg-light">
-								<Link className="navbar-brand" href="#">
+								<Link className="navbar-brand" to="/">
 									<span role="img" arial-label="Mãos em posição de oração">&#x1F64F;</span>
 								</Link>
 								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
