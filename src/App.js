@@ -6,9 +6,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Solicitation from './components/solicitation/Solicitation';
+import Thank from './components/thank/Thanks';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
             <Solicitation></Solicitation>
           </Route>
           <Route exact path="/agradecimentos">
-            <Solicitation></Solicitation>
+            <Thank></Thank>
           </Route>
         </Switch>
       </Router>

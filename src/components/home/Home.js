@@ -33,7 +33,6 @@ function Home(props) {
         <div className="row">
           <div className="col-12">
             <h1 className="title">Pecadores Anônimos</h1>
-            {/* <h2 className="subtitle">Orai sem cessar. 1° Ts 5:17</h2>  */}
             <h2 className="subtitle">Pois todos pecaram e carecem da glória de Deus, sendo justificados gratuitamente, por sua graça, mediante a redenção que há em Cristo Jesus. Rm 3:23-24</h2>
           </div>
         </div>
